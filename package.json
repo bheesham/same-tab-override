@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "web-ext lint --verbose",
     "build": "web-ext build --verbose --overwrite-dest",
-    "sign": "web-ext sign --verbose --amo-metadata metadata.json"
+    "sign": "web-ext sign --amo-metadata metadata.json"
   },
   "devDependencies": {
     "web-ext": "^8.8.0"
