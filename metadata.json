@@ -2,7 +2,10 @@
   "summary": {
     "en-US": "Links open in a new tab? No thanks."
   },
-  "categories": [],
+  "categories": [
+    "tabs",
+    "other"
+  ],
   "version": {
     "license": "MPL-2.0",
     "approval_notes": "You'll need to be signed into the SSO Dashboard (sso.mozilla.com)."
