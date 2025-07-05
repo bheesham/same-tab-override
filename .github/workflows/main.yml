@@ -16,7 +16,9 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
-  publish: &publish
+  # See: https://github.com/actions/runner/issues/1182
+  # publish: &publish
+  publish:
     runs-on: ubuntu-latest
     if: ${{ startsWith(github.ref, 'refs/heads/main') }}
     needs: lint-build
