@@ -31,9 +31,9 @@ jobs:
           cache: npm
       - run: npm ci
       - env:
-          WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY}}
-          WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_KEY}}
-          WEB_EXT_CHANNEL:  ${{ vars.WEB_EXT_CHANNEL}}
+          WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
+          WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
+          WEB_EXT_CHANNEL:  ${{ vars.WEB_EXT_CHANNEL }}
         run: |
           npm run sign
   publish-amo:
@@ -51,8 +51,8 @@ jobs:
           cache: npm
       - run: npm ci
       - env:
-          WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY}}
-          WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_KEY}}
-          WEB_EXT_CHANNEL:  ${{ vars.WEB_EXT_CHANNEL}}
+          WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
+          WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
+          WEB_EXT_CHANNEL:  ${{ vars.WEB_EXT_CHANNEL }}
         run: |
           npm run sign
