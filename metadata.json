@@ -3,8 +3,7 @@
     "en-US": "Links open in a new tab? No thanks."
   },
   "categories": [
-    "tabs",
-    "other"
+    "tabs"
   ],
   "version": {
     "license": "MPL-2.0",
