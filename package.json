@@ -1,0 +1,26 @@
+{
+  "name": "same-tab-override",
+  "version": "0.0.0",
+  "description": "Opens links on Mozilla's SSO Dashboard in the same tab.",
+  "scripts": {
+    "lint": "web-ext lint -s ext/",
+    "build": "web-ext build -s ext/",
+    "sign": "web-ext sign --amo-metadata metadata.json -s ext/"
+  },
+  "devDependencies": {
+    "web-ext": "^8.8.0"
+  },
+  "keywords": [
+    "firefox"
+  ],
+  "homepage": "https://github.com/bheesham/same-tab-override#readme",
+  "bugs": {
+    "url": "https://github.com/bheesham/same-tab-override/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bheesham/same-tab-override.git"
+  },
+  "license": "MPL-2.0",
+  "author": "Bheesham Persaud"
+}

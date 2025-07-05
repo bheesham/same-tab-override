@@ -1,0 +1,56 @@
+name: Main
+
+on:
+  pull_request: {}
+  push: {}
+
+jobs:
+  lint-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.3.0
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+  publish: &publish
+    runs-on: ubuntu-latest
+    if: ${{ startsWith(github.ref, 'refs/heads/main') }}
+    needs: lint-build
+    environment: dev
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.3.0
+          cache: npm
+      - run: npm ci
+      - env:
+          WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY}}
+          WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_KEY}}
+          WEB_EXT_CHANNEL:  ${{ vars.WEB_EXT_CHANNEL}}
+        run: |
+          npm run sign
+  publish:
+    # See: https://github.com/actions/runner/issues/1182
+    # <<: *publish
+    runs-on: ubuntu-latest
+    if: ${{ startsWith(github.ref, 'refs/tags/v') }}
+    needs: lint-build
+    environment: prod
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.3.0
+          cache: npm
+      - run: npm ci
+      - env:
+          WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY}}
+          WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_KEY}}
+          WEB_EXT_CHANNEL:  ${{ vars.WEB_EXT_CHANNEL}}
+        run: |
+          npm run sign
