@@ -2,6 +2,8 @@
 
 Opens links on Mozilla's SSO Dashboard in the same tab.
 
+[Install on Firefox](https://addons.mozilla.org/en-CA/firefox/addon/342171922c8143d2833d/)
+
 History: https://github.com/mozilla-iam/sso-dashboard/pull/561
 
 # But why not {grease,tamper}monkey?
