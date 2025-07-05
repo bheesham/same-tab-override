@@ -9,5 +9,15 @@
       "matches": ["https://sso.mozilla.com/dashboard"],
       "js": ["same-tab-override.js"]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "same-tab-override@addons.bheesham.com",
+      "strict_min_version": "58.0"
+    },
+    "gecko_android": {
+      "id": "same-tab-override@addons.bheesham.com",
+      "strict_min_version": "58.0"
+    }
+  }
 }
