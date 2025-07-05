@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Opens links on Mozilla's SSO Dashboard in the same tab.",
   "scripts": {
-    "lint": "web-ext lint --verbose",
+    "lint": "web-ext lint --verbose --boring",
     "build": "web-ext build --verbose --overwrite-dest",
     "sign": "web-ext sign --amo-metadata metadata.json"
   },
