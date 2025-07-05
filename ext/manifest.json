@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Same Tab Override",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Links open in a new tab? No thanks.",
   "icons": {},
   "content_scripts": [
