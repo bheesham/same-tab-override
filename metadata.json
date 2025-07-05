@@ -1,6 +1,10 @@
 {
+  "default_locale": "en-US",
   "summary": {
     "en-US": "Links open in a new tab? No thanks."
+  },
+  "description": {
+    "en-US": "Makes links on Mozilla's SSO Dashboard open in the current tab."
   },
   "categories": [
     "tabs"
@@ -8,5 +12,11 @@
   "version": {
     "license": "MPL-2.0",
     "approval_notes": "You'll need to be signed into the SSO Dashboard (sso.mozilla.com)."
+  },
+  "developer_comments": {
+    "en-US": "Open source on GitHub. See the homepage."
+  },
+  "homepage": {
+    "en-US": "https://github.com/bheesham/same-tab-override"
   }
 }
