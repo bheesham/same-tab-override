@@ -3,12 +3,15 @@
   "version": "0.0.0",
   "description": "Opens links on Mozilla's SSO Dashboard in the same tab.",
   "scripts": {
-    "lint": "web-ext lint -s ext/",
-    "build": "web-ext build -s ext/",
-    "sign": "web-ext sign --amo-metadata metadata.json -s ext/"
+    "lint": "web-ext lint --verbose",
+    "build": "web-ext build --verbose --overwrite-dest",
+    "sign": "web-ext sign --verbose --amo-metadata metadata.json"
   },
   "devDependencies": {
     "web-ext": "^8.8.0"
+  },
+  "webExt": {
+    "sourceDir": "ext/"
   },
   "keywords": [
     "firefox"
