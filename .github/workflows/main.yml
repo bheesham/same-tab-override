@@ -34,7 +34,7 @@ jobs:
           WEB_EXT_CHANNEL:  ${{ vars.WEB_EXT_CHANNEL}}
         run: |
           npm run sign
-  publish:
+  publish-amo:
     # See: https://github.com/actions/runner/issues/1182
     # <<: *publish
     runs-on: ubuntu-latest
